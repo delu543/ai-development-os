@@ -1,0 +1,54 @@
+diff --git a/agenda.py b/agenda.py
+index d966e05..6a81e7f 100644
+--- a/agenda.py
++++ b/agenda.py
+@@ -1,9 +1,19 @@
+ import json
+ import sys
++from datetime import datetime, timezone
++
++
++def utc_day(start):
++    if start.endswith("Z"):
++        start = start[:-1] + "+00:00"
++    instant = datetime.fromisoformat(start)
++    if instant.utcoffset() is None:
++        raise ValueError("An event start time must include a UTC offset")
++    return instant.astimezone(timezone.utc).date().isoformat()
+ 
+ 
+ def entries(day, rows):
+-    return [row["id"] for row in rows if row["start"][:10] == day and not row["cancelled"]]
++    return [row["id"] for row in rows if not row["cancelled"] and utc_day(row["start"]) == day]
+ 
+ 
+ if __name__ == "__main__":
+diff --git a/tests/test_utc_day.py b/tests/test_utc_day.py
+new file mode 100644
+index 0000000..827ce06
+--- /dev/null
++++ b/tests/test_utc_day.py
+@@ -0,0 +1,23 @@
++import unittest
++from datetime import datetime, timedelta, timezone
++
++from agenda import entries
++
++
++class CalendarDayTests(unittest.TestCase):
++    def test_one_instant_has_one_day_across_offsets(self):
++        midnight = datetime(2026, 11, 25, tzinfo=timezone.utc)
++        samples = [(-1, False), (0, True), (1, True), (43200, True),
++                   (86399, True), (86400, False)]
++        for seconds, belongs in samples:
++            instant = midnight + timedelta(seconds=seconds)
++            for hours in (-11, -5, 0, 8, 14):
++                with self.subTest(seconds=seconds, offset=hours):
++                    stamp = instant.astimezone(timezone(timedelta(hours=hours))).isoformat()
++                    rows = [dict(id="event", start=stamp, cancelled=False)]
++                    self.assertEqual(entries("2026-11-25", rows), ["event"] if belongs else [])
++
++    def test_cancelled_event_is_filtered(self):
++        rows = [dict(id="cancel", start="2026-11-24T19:00:00-05:00", cancelled=True),
++                dict(id="keep", start="2026-11-25T00:00:00Z", cancelled=False)]
++        self.assertEqual(entries("2026-11-25", rows), ["keep"])

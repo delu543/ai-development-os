@@ -1,0 +1,417 @@
+{
+  "task": "CAL-UTC-001",
+  "day": "2026-11-25",
+  "data": "synthetic",
+  "method": "same CLI and inputs, independent expected membership by UTC instant label",
+  "inputs": {
+    "metamorphic": [
+      {
+        "id": "before_-480",
+        "start": "2026-11-24T15:59:59.999999-08:00",
+        "cancelled": false
+      },
+      {
+        "id": "before_-300",
+        "start": "2026-11-24T18:59:59.999999-05:00",
+        "cancelled": false
+      },
+      {
+        "id": "before_0",
+        "start": "2026-11-24T23:59:59.999999+00:00",
+        "cancelled": false
+      },
+      {
+        "id": "before_330",
+        "start": "2026-11-25T05:29:59.999999+05:30",
+        "cancelled": false
+      },
+      {
+        "id": "before_840",
+        "start": "2026-11-25T13:59:59.999999+14:00",
+        "cancelled": false
+      },
+      {
+        "id": "lower_-480",
+        "start": "2026-11-24T16:00:00-08:00",
+        "cancelled": false
+      },
+      {
+        "id": "lower_-300",
+        "start": "2026-11-24T19:00:00-05:00",
+        "cancelled": false
+      },
+      {
+        "id": "lower_0",
+        "start": "2026-11-25T00:00:00+00:00",
+        "cancelled": false
+      },
+      {
+        "id": "lower_330",
+        "start": "2026-11-25T05:30:00+05:30",
+        "cancelled": false
+      },
+      {
+        "id": "lower_840",
+        "start": "2026-11-25T14:00:00+14:00",
+        "cancelled": false
+      },
+      {
+        "id": "early_-480",
+        "start": "2026-11-24T16:30:00-08:00",
+        "cancelled": false
+      },
+      {
+        "id": "early_-300",
+        "start": "2026-11-24T19:30:00-05:00",
+        "cancelled": false
+      },
+      {
+        "id": "early_0",
+        "start": "2026-11-25T00:30:00+00:00",
+        "cancelled": false
+      },
+      {
+        "id": "early_330",
+        "start": "2026-11-25T06:00:00+05:30",
+        "cancelled": false
+      },
+      {
+        "id": "early_840",
+        "start": "2026-11-25T14:30:00+14:00",
+        "cancelled": false
+      },
+      {
+        "id": "noon_-480",
+        "start": "2026-11-25T04:00:00-08:00",
+        "cancelled": false
+      },
+      {
+        "id": "noon_-300",
+        "start": "2026-11-25T07:00:00-05:00",
+        "cancelled": false
+      },
+      {
+        "id": "noon_0",
+        "start": "2026-11-25T12:00:00+00:00",
+        "cancelled": false
+      },
+      {
+        "id": "noon_330",
+        "start": "2026-11-25T17:30:00+05:30",
+        "cancelled": false
+      },
+      {
+        "id": "noon_840",
+        "start": "2026-11-26T02:00:00+14:00",
+        "cancelled": false
+      },
+      {
+        "id": "last_-480",
+        "start": "2026-11-25T15:59:59.999999-08:00",
+        "cancelled": false
+      },
+      {
+        "id": "last_-300",
+        "start": "2026-11-25T18:59:59.999999-05:00",
+        "cancelled": false
+      },
+      {
+        "id": "last_0",
+        "start": "2026-11-25T23:59:59.999999+00:00",
+        "cancelled": false
+      },
+      {
+        "id": "last_330",
+        "start": "2026-11-26T05:29:59.999999+05:30",
+        "cancelled": false
+      },
+      {
+        "id": "last_840",
+        "start": "2026-11-26T13:59:59.999999+14:00",
+        "cancelled": false
+      },
+      {
+        "id": "upper_-480",
+        "start": "2026-11-25T16:00:00-08:00",
+        "cancelled": false
+      },
+      {
+        "id": "upper_-300",
+        "start": "2026-11-25T19:00:00-05:00",
+        "cancelled": false
+      },
+      {
+        "id": "upper_0",
+        "start": "2026-11-26T00:00:00+00:00",
+        "cancelled": false
+      },
+      {
+        "id": "upper_330",
+        "start": "2026-11-26T05:30:00+05:30",
+        "cancelled": false
+      },
+      {
+        "id": "upper_840",
+        "start": "2026-11-26T14:00:00+14:00",
+        "cancelled": false
+      }
+    ],
+    "cancel": [
+      {
+        "id": "cancel0",
+        "start": "2026-11-25T12:00:00+00:00",
+        "cancelled": true
+      },
+      {
+        "id": "active",
+        "start": "2026-11-25T12:00:00+00:00",
+        "cancelled": false
+      },
+      {
+        "id": "cancelEast",
+        "start": "2026-11-25T12:00:00+08:00",
+        "cancelled": true
+      },
+      {
+        "id": "cancelWest",
+        "start": "2026-11-25T00:05:00-05:00",
+        "cancelled": true
+      }
+    ],
+    "empty": [],
+    "no_match": [
+      {
+        "id": "tomorrow",
+        "start": "2026-11-26T12:00:00+00:00",
+        "cancelled": false
+      }
+    ],
+    "west_lower": [
+      {
+        "id": "west_lower",
+        "start": "2026-11-24T19:00:00-05:00",
+        "cancelled": false
+      }
+    ],
+    "east_prev": [
+      {
+        "id": "east_prev",
+        "start": "2026-11-25T00:10:00+08:00",
+        "cancelled": false
+      }
+    ],
+    "east_last": [
+      {
+        "id": "east_last",
+        "start": "2026-11-26T07:59:59+08:00",
+        "cancelled": false
+      }
+    ],
+    "west_upper": [
+      {
+        "id": "west_upper",
+        "start": "2026-11-25T19:00:00-05:00",
+        "cancelled": false
+      }
+    ]
+  },
+  "expected": {
+    "metamorphic": [
+      "lower_-480",
+      "lower_-300",
+      "lower_0",
+      "lower_330",
+      "lower_840",
+      "early_-480",
+      "early_-300",
+      "early_0",
+      "early_330",
+      "early_840",
+      "noon_-480",
+      "noon_-300",
+      "noon_0",
+      "noon_330",
+      "noon_840",
+      "last_-480",
+      "last_-300",
+      "last_0",
+      "last_330",
+      "last_840"
+    ],
+    "cancel": [
+      "active"
+    ],
+    "empty": [],
+    "no_match": [],
+    "west_lower": [
+      "west_lower"
+    ],
+    "east_prev": [],
+    "east_last": [
+      "east_last"
+    ],
+    "west_upper": []
+  },
+  "runs": {
+    "baseline": {
+      "sha": "8062a322b298c5a6ffb14741633008dc267103a6",
+      "outcomes": {
+        "metamorphic": {
+          "actual": [
+            "before_330",
+            "before_840",
+            "lower_0",
+            "lower_330",
+            "lower_840",
+            "early_0",
+            "early_330",
+            "early_840",
+            "noon_-480",
+            "noon_-300",
+            "noon_0",
+            "noon_330",
+            "last_-480",
+            "last_-300",
+            "last_0",
+            "upper_-480",
+            "upper_-300"
+          ],
+          "exit": 0,
+          "passed": false
+        },
+        "cancel": {
+          "actual": [
+            "active"
+          ],
+          "exit": 0,
+          "passed": true
+        },
+        "empty": {
+          "actual": [],
+          "exit": 0,
+          "passed": true
+        },
+        "no_match": {
+          "actual": [],
+          "exit": 0,
+          "passed": true
+        },
+        "west_lower": {
+          "actual": [],
+          "exit": 0,
+          "passed": false
+        },
+        "east_prev": {
+          "actual": [
+            "east_prev"
+          ],
+          "exit": 0,
+          "passed": false
+        },
+        "east_last": {
+          "actual": [],
+          "exit": 0,
+          "passed": false
+        },
+        "west_upper": {
+          "actual": [
+            "west_upper"
+          ],
+          "exit": 0,
+          "passed": false
+        }
+      },
+      "correct_membership": 19,
+      "missing": [
+        "early_-300",
+        "early_-480",
+        "last_330",
+        "last_840",
+        "lower_-300",
+        "lower_-480",
+        "noon_840"
+      ],
+      "extra": [
+        "before_330",
+        "before_840",
+        "upper_-300",
+        "upper_-480"
+      ]
+    },
+    "candidate": {
+      "sha": "8b44b5aedc0aa78f5868f69b159d52f870163a06",
+      "outcomes": {
+        "metamorphic": {
+          "actual": [
+            "lower_-480",
+            "lower_-300",
+            "lower_0",
+            "lower_330",
+            "lower_840",
+            "early_-480",
+            "early_-300",
+            "early_0",
+            "early_330",
+            "early_840",
+            "noon_-480",
+            "noon_-300",
+            "noon_0",
+            "noon_330",
+            "noon_840",
+            "last_-480",
+            "last_-300",
+            "last_0",
+            "last_330",
+            "last_840"
+          ],
+          "exit": 0,
+          "passed": true
+        },
+        "cancel": {
+          "actual": [
+            "active"
+          ],
+          "exit": 0,
+          "passed": true
+        },
+        "empty": {
+          "actual": [],
+          "exit": 0,
+          "passed": true
+        },
+        "no_match": {
+          "actual": [],
+          "exit": 0,
+          "passed": true
+        },
+        "west_lower": {
+          "actual": [
+            "west_lower"
+          ],
+          "exit": 0,
+          "passed": true
+        },
+        "east_prev": {
+          "actual": [],
+          "exit": 0,
+          "passed": true
+        },
+        "east_last": {
+          "actual": [
+            "east_last"
+          ],
+          "exit": 0,
+          "passed": true
+        },
+        "west_upper": {
+          "actual": [],
+          "exit": 0,
+          "passed": true
+        }
+      },
+      "correct_membership": 30,
+      "missing": [],
+      "extra": []
+    }
+  }
+}
