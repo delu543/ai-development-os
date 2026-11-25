@@ -1,4 +1,4 @@
-# AI Development OS V3.2 使用说明
+# AI Development OS V3.2.1 使用说明
 
 这是一个可以应用到不同产品的研发质量管理 Skill。它独立存放，产品继续使用原有的目录、文档和发布流程。开发者先把产品保存好，以后审查者拿到仓库链接就能工作。两端可以分别用 Codex 或 Claude Code。
 
@@ -119,3 +119,5 @@ python3 scripts/repo_coverage.py check --repo "/本地产品仓库" --ref "完�
 - [SKILL.md](SKILL.md) 是总入口，含 16 个模块的可点击索引。每个 `references/` 文件都有可单独复制的完整提示词。模块 13 的两个框分两次发。
 - [阶段状态](templates/PIPELINE_STATE.md)、[需求追踪矩阵](templates/TRACEABILITY.md)、[证据索引](templates/EVIDENCE.md) 和 [审计报告](templates/AUDIT_REPORT.md)可在独立审查区按需使用。各专项模块还链接了相应模板。产品仓库只需原有通用导航。若项目本就维护工具约定，另有可选的 [AGENTS 模板](templates/AGENTS.md) 和 [Claude Code 模板](templates/CLAUDE.md) 供摘用。
 - 本包提供提示词、表单、仓库清单工具和本地看板工具。CI 运行、模型调用、生产发布与用户实验依赖具体项目的环境、权限和实际执行记录。
+
+Copyright © 2026 delu543。安装包内的源码、提示词、模板和文档采用 MIT 许可证。[许可全文](LICENSE) · [公开仓库与发行版](https://github.com/delu543/ai-development-os)

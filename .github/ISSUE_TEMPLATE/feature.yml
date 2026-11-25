@@ -1,0 +1,17 @@
+name: 提议改进 · Feature request
+description: 说明哪类项目或用户任务还没有被当前工作流照顾到。
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: 谁想完成什么任务 / User and task
+      description: 可用一个合成项目描述实际场景及目前的困难。
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 改进后怎样验收 / Observable outcome
+      description: 什么变化能证明这项改进有用？已有替代办法也可以写在这里。
+    validations:
+      required: true

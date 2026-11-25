@@ -1,0 +1,27 @@
+name: 报告问题 · Bug report
+description: 用合成示例说明审查、报告或工具遇到了什么问题。
+body:
+  - type: markdown
+    attributes:
+      value: 涉及安全或敏感资料时，请转到[私密安全报告](https://github.com/delu543/ai-development-os/security/advisories/new)。中文和英文均可。
+  - type: input
+    id: environment
+    attributes:
+      label: 版本与运行环境 / Version and host
+      placeholder: 例如 3.2.1，Codex 或 Claude Code，操作系统
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: 输入与操作 / Input and steps
+      description: 请给一份可公开的最小合成输入，以及触发问题的步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期与实际 / Expected and observed
+      description: 如有对应的模块编号、证据或退出码，可以一同附上。
+    validations:
+      required: true

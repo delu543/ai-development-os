@@ -1,0 +1,28 @@
+name: Verify skill and distribution
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - name: Check out source
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Check fixed-tree inventory
+        run: python3 tests/test_coverage.py
+      - name: Check audit reports and dashboards
+        run: python3 tests/test_audit_report.py
+      - name: Check documentation and build release files
+        run: python3 scripts/check_distribution.py --output-dir "$RUNNER_TEMP/ai-development-os-release"
