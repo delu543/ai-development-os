@@ -1,0 +1,56 @@
+{
+  "candidate": "8062a322b298c5a6ffb14741633008dc267103a6",
+  "time_utc": "2026-11-25T06:39:07.835040+00:00",
+  "stage_b_source_sha256": "0d55ecf709d61ee8bd5476aa6a0ab95e6d57abacfd78b58944a1b1e8b8668d93",
+  "stage_a_sha256_verified_after": "c9290a68e2c86ec9e2d53d31fabe055b9af36b79b24d3893e9b042255c979ee6",
+  "cases": {
+    "utc": {
+      "input": [
+        {
+          "id": "same-shift",
+          "start": "2026-11-25T00:00:00+00:00",
+          "cancelled": false
+        }
+      ],
+      "expected": [
+        "same-shift"
+      ],
+      "actual": [
+        "same-shift"
+      ],
+      "command": [
+        "python3",
+        "-B",
+        "agenda.py",
+        "2026-11-25",
+        "../inputs/b-same-instant-utc.json"
+      ],
+      "cwd": "snapshot",
+      "returncode": 0,
+      "stderr": ""
+    },
+    "west": {
+      "input": [
+        {
+          "id": "same-shift",
+          "start": "2026-11-24T19:00:00-05:00",
+          "cancelled": false
+        }
+      ],
+      "expected": [
+        "same-shift"
+      ],
+      "actual": [],
+      "command": [
+        "python3",
+        "-B",
+        "agenda.py",
+        "2026-11-25",
+        "../inputs/b-same-instant-west.json"
+      ],
+      "cwd": "snapshot",
+      "returncode": 0,
+      "stderr": ""
+    }
+  }
+}
