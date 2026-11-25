@@ -413,5 +413,83 @@
       "missing": [],
       "extra": []
     }
+  },
+  "additional_compatibility_checks": {
+    "python": "3.9.6",
+    "cases": {
+      "dot_tenth": {
+        "input": [
+          {
+            "id": "dot_tenth",
+            "start": "2026-11-25T12:00:00.1+00:00",
+            "cancelled": false
+          }
+        ],
+        "expected": [
+          "dot_tenth"
+        ],
+        "baseline": {
+          "exit": 0,
+          "actual": [
+            "dot_tenth"
+          ],
+          "last_error": null
+        },
+        "candidate": {
+          "exit": 1,
+          "actual": null,
+          "last_error": "ValueError: Invalid isoformat string: '2026-11-25T12:00:00.1+00:00'"
+        }
+      },
+      "comma_tenth": {
+        "input": [
+          {
+            "id": "comma_tenth",
+            "start": "2026-11-25T12:00:00,1+00:00",
+            "cancelled": false
+          }
+        ],
+        "expected": [
+          "comma_tenth"
+        ],
+        "baseline": {
+          "exit": 0,
+          "actual": [
+            "comma_tenth"
+          ],
+          "last_error": null
+        },
+        "candidate": {
+          "exit": 1,
+          "actual": null,
+          "last_error": "ValueError: Invalid isoformat string: '2026-11-25T12:00:00,1+00:00'"
+        }
+      },
+      "compact_offset": {
+        "input": [
+          {
+            "id": "compact_offset",
+            "start": "2026-11-25T12:00:00+0000",
+            "cancelled": false
+          }
+        ],
+        "expected": [
+          "compact_offset"
+        ],
+        "baseline": {
+          "exit": 0,
+          "actual": [
+            "compact_offset"
+          ],
+          "last_error": null
+        },
+        "candidate": {
+          "exit": 1,
+          "actual": null,
+          "last_error": "ValueError: Invalid isoformat string: '2026-11-25T12:00:00+0000'"
+        }
+      }
+    },
+    "verdict": "UTC boundary cases pass. AC-1 remains open because valid, previously accepted ISO 8601 forms raise ValueError in the supported local environment. Return only this regression to the developer."
   }
 }
