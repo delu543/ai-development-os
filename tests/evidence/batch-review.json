@@ -1,0 +1,222 @@
+{
+  "ticket": "SEATS-B01",
+  "original_ac": [
+    "AC-1",
+    "AC-2"
+  ],
+  "baseline": {
+    "sha": "3388d724b3b54551978c373fd4802626be883675",
+    "checks": [
+      {
+        "id": "AC-1",
+        "expected": [
+          {
+            "画": 2
+          }
+        ],
+        "actual": [
+          {
+            "画": 1
+          }
+        ],
+        "passed": false
+      },
+      {
+        "id": "AC-2",
+        "expected": [
+          {
+            "琴": 2
+          },
+          {
+            "琴": 4
+          }
+        ],
+        "actual": [
+          {
+            "琴": 4
+          }
+        ],
+        "passed": false
+      },
+      {
+        "id": "保护既有退课逻辑",
+        "expected": [
+          {
+            "棋": 1
+          }
+        ],
+        "actual": [
+          {
+            "棋": 1
+          }
+        ],
+        "passed": true
+      },
+      {
+        "id": "保护余位零下限",
+        "expected": [
+          {
+            "棋": 0
+          }
+        ],
+        "actual": [
+          {
+            "棋": 0
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "first_return": {
+    "sha": "cde08419f014e5100cc20b6b8a11be8b63011c81",
+    "checks": [
+      {
+        "id": "AC-1",
+        "expected": [
+          {
+            "画": 2
+          }
+        ],
+        "actual": [
+          {
+            "画": 2
+          }
+        ],
+        "passed": true
+      },
+      {
+        "id": "AC-2",
+        "expected": [
+          {
+            "琴": 2
+          },
+          {
+            "琴": 4
+          }
+        ],
+        "actual": [
+          {
+            "琴": 4
+          }
+        ],
+        "passed": false
+      },
+      {
+        "id": "保护既有退课逻辑",
+        "expected": [
+          {
+            "棋": 1
+          }
+        ],
+        "actual": [
+          {
+            "棋": 1
+          }
+        ],
+        "passed": true
+      },
+      {
+        "id": "保护余位零下限",
+        "expected": [
+          {
+            "棋": 0
+          }
+        ],
+        "actual": [
+          {
+            "棋": 0
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "second_return": {
+    "sha": "7eb8731ab0f159457ee9a1654bc2e6fd7c908a2b",
+    "checks": [
+      {
+        "id": "AC-1",
+        "expected": [
+          {
+            "画": 2
+          }
+        ],
+        "actual": [
+          {
+            "画": 2
+          }
+        ],
+        "passed": true
+      },
+      {
+        "id": "AC-2",
+        "expected": [
+          {
+            "琴": 2
+          },
+          {
+            "琴": 4
+          }
+        ],
+        "actual": [
+          {
+            "琴": 2
+          },
+          {
+            "琴": 4
+          }
+        ],
+        "passed": true
+      },
+      {
+        "id": "保护既有退课逻辑",
+        "expected": [
+          {
+            "棋": 1
+          }
+        ],
+        "actual": [
+          {
+            "棋": 1
+          }
+        ],
+        "passed": true
+      },
+      {
+        "id": "保护余位零下限",
+        "expected": [
+          {
+            "棋": 0
+          }
+        ],
+        "actual": [
+          {
+            "棋": 0
+          }
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "verdicts": [
+    [
+      false,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true
+    ]
+  ]
+}
